@@ -18,6 +18,14 @@ namespace ContactMailer.Repositories
                 SubmissionDate = null,
                 Status = SurveyRequestStatus.Pending,
             },
+            [Guid.Parse("bb9072aa-1a08-457a-8ecb-e80807527e44")] = new SurveyRequest
+            {
+                Id = Guid.Parse("bb9072aa-1a08-457a-8ecb-e80807527e44"),
+                EmailAddress = "tester1@tester.test",
+                FullName = "Mpampis Flou",
+                SubmissionDate = null,
+                Status = SurveyRequestStatus.Pending,
+            },
         };
 
         public SurveyRequest Get(Guid id)
