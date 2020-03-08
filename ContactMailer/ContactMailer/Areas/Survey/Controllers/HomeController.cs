@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ContactMailer.Models;
 
-namespace ContactMailer.Controllers
+namespace ContactMailer.Survey.Controllers
+
 {
     public class HomeController : Controller
     {
