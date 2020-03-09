@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 
 namespace ContactMailer.Models
 {
-    public class SurveyRequest
+    public class ConsentRequest
     {
         public Guid Id { get; set; }
         public string EmailAddress { get; set; }
         public string FullName { get; set; }
+        public string Template { get; set; }
         public DateTime? SubmissionDate { get; set; }
-        public SurveyRequestStatus Status { get; set; }
+        public ConsentRequestStatus Status { get; set; }
 
     }
 }

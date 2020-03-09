@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ContactMailer.Data;
+using ContactMailer.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,8 @@ namespace ContactMailer
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<LiteDbOptions>(Configuration.GetSection("LiteDbOptions"));
+
+            services.AddSingleton<IConsentRequestRepository, DummyConsentRequestRepository>();
             services.AddSingleton<ILiteDbContext, LiteDbContext>();
 
             services.AddControllersWithViews();
@@ -50,7 +53,7 @@ namespace ContactMailer
             {
                 endpoints.MapControllerRoute(
                     name: "areas",
-                    pattern: "{area=Survey}/{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{area=Consent}/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

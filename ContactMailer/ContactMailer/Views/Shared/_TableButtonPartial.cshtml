@@ -1,0 +1,15 @@
+﻿@model Guid
+
+<td style="width:150px">
+    <div class="btn-group" role="group">
+        <a class="btn" asp-action="Edit" asp-route-id="@Model">
+            <i class="far fa-edit"></i>
+        </a>
+        <a class="btn" asp-action="Details" asp-route-id="@Model">
+            <i class="far fa-list-alt"></i>
+        </a>
+        <a class="btn" asp-action="Delete" asp-route-id="@Model">
+            <i class="far fa-trash-alt"></i>
+        </a>
+    </div>
+</td>

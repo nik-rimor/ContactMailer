@@ -1,6 +1,6 @@
 ﻿namespace ContactMailer.Models
 {
-    public enum SurveyRequestStatus
+    public enum ConsentRequestStatus
     {
         New,
         Pending,

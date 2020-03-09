@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ContactMailer.Data
 {
-    interface ILiteDbContext
+    public interface ILiteDbContext
     {
-        LiteDatabase Database { get;  }
+        public LiteDatabase Database { get;  }
     }
 }
